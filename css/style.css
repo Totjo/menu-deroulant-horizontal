@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h2{
+    font-variant: small-caps;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    margin: 1%;
+}
+
+ul{
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+li{
+    position: relative;
+    width: 250px;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    font-weight: bold ;
+    color: white;
+    padding: 4% 5%;
+    border-bottom: solid white 2px;
+}
+
+a:hover{
+    color: orangered;
+    background-color: white;
+}
+
+.ul-level1 li{
+    background-color: orangered;
+}
+
+.ul-level2 li{
+    background-color: steelblue;
+}
+
+.ul-level3 li{
+    background-color: tomato;
+}
+
+.ul-level4 li{
+    background-color: seagreen;
+}
+
+/* ///////////////////////////////////////////////////////
+Autre façon de faire plus longue et pour cibler un élément
+/////////////////////////////////////////////////////// */
+
+/* .ul-level3{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 100%;
+}
+
+.ul-level4{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 100%;
+} */
+
+.ul-level2{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    max-height: 0;
+    display: none;
+}
+
+ul ul ul{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    left: 100%;
+    display: none;
+}
+
+.ul-level1 li:hover .ul-level2{
+    display: block;
+}
+
+.ul-level2 li:hover .ul-level3{
+    display: block;
+}
+
+.ul-level3 li:hover .ul-level4{
+    display: block;
+}
